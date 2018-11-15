@@ -23,7 +23,7 @@
             {!! Form::text('colegio', null, ['class'=>'form-control', 'placeholder'=>'Colegio', 'id'=>'colegio_', 'required']) !!}
           </div>
           <div class="col-md-6">
-            <label for="responsable_" > <b><i>Responsable</i></b> </label>
+            <label for="responsable_" > <b><i>Director/Profesor</i></b> </label>
             {!! Form::text('responsable', null, ['class'=>'form-control', 'placeholder'=>'Responsable', 'id'=>'responsable_', 'required']) !!}
           </div>
         </div>
@@ -36,6 +36,27 @@
           <div class="col-md-6">
             <label for="observacion_" > <b><i>Observacion</i></b> </label>
             {!! Form::text('observacion', null, ['class'=>'form-control', 'placeholder'=>'Observacion', 'id'=>'observacion_', 'required']) !!}
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nombre1_" > <b><i>Tecnico 1</i></b> </label>
+            {!! Form::text('nombre1', null, ['class'=>'form-control', 'placeholder'=>'Nombre Tecnico 1', 'id'=>'nombre1_', 'required']) !!}
+          </div>
+          <div class="col-md-6">
+            <label for="ci1_" > <b><i>CI 1</i></b> </label>
+            {!! Form::text('ci1', null, ['class'=>'form-control', 'placeholder'=>'Documento Identidad', 'id'=>'ci1_', 'required']) !!}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <label for="nombre2_" > <b><i>Tecnico 2</i></b> </label>
+            {!! Form::text('nombre2', null, ['class'=>'form-control', 'placeholder'=>'Nombre Tecnico 2', 'id'=>'nombre2_', 'required']) !!}
+          </div>
+          <div class="col-md-6">
+            <label for="ci2_" > <b><i>CI 2</i></b> </label>
+            {!! Form::text('ci2', null, ['class'=>'form-control', 'placeholder'=>'Documento Identidad', 'id'=>'ci2_', 'required']) !!}
           </div>
         </div>
 
@@ -70,7 +91,7 @@
                         {!! Form::text('colegio', null, ['class'=>'form-control', 'placeholder'=>'Colegio', 'id'=>'colegio', 'required']) !!}
                       </div>
                       <div class="col-md-6">
-                        <label for="responsable_" > <b><i>Responsable</i></b> </label>
+                        <label for="responsable_" > <b><i>Director/Profesor</i></b> </label>
                         {!! Form::text('responsable', null, ['class'=>'form-control', 'placeholder'=>'Responsable', 'id'=>'responsable', 'required']) !!}
                       </div>
                     </div>
@@ -85,7 +106,29 @@
                         {!! Form::text('observacion', null, ['class'=>'form-control', 'placeholder'=>'Observacion', 'id'=>'observacion', 'required']) !!}
                       </div>
                     </div>
+                    <hr>
 
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="nombre1" > <b><i>Tecnico 1</i></b> </label>
+                        {!! Form::text('nombre1', null, ['class'=>'form-control', 'placeholder'=>'Nombre Tecnico 1', 'id'=>'nombre1', 'required']) !!}
+                      </div>
+                      <div class="col-md-6">
+                        <label for="ci1" > <b><i>CI 1</i></b> </label>
+                        {!! Form::text('ci1', null, ['class'=>'form-control', 'placeholder'=>'Documento Identidad', 'id'=>'ci1', 'required']) !!}
+                      </div>
+
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label for="nombre2" > <b><i>Tecnico 2</i></b> </label>
+                        {!! Form::text('nombre2', null, ['class'=>'form-control', 'placeholder'=>'Nombre Tecnico 2', 'id'=>'nombre2', 'required']) !!}
+                      </div>
+                      <div class="col-md-6">
+                        <label for="ci2" > <b><i>CI 2</i></b> </label>
+                        {!! Form::text('ci2', null, ['class'=>'form-control', 'placeholder'=>'Documento Identidad', 'id'=>'ci2', 'required']) !!}
+                      </div>
+                    </div>
                     <hr>
 
                     {!! Form::hidden('id_usuario', '1') !!}
@@ -199,9 +242,11 @@
                       $('#responsable').val(el.responsable);
                       $('#telefono').val(el.telefono);
                       $('#observacion').val(el.observacion);
+                      $('#nombre1').val(el.nombre1);
+                      $('#nombre2').val(el.nombre2);
+                      $('#ci1').val(el.ci1);
+                      $('#ci2').val(el.ci2);
                     });
-                }else{
-                    //
                 }
             });
         });

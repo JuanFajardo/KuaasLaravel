@@ -1,8 +1,4 @@
 <?php
-$nombre1  = "Ing. Ignacio Maturano Morales";
-$nombre2  = "Ing. Richard Carmona Estrada";
-$c1 = "13262003";
-$c2 = "6680378";
 function bett0Fecha($mes){
   $letra = "";
   switch ($mes) {
@@ -51,7 +47,9 @@ function bett0Fecha($mes){
           <tr>
             <td width="30">&nbsp; </td>
             <td width="30"> <b>DE:</b> </td>
-            <td> {{$nombre2}} ,  {{$nombre2}} </td>
+            <td>
+                  {{$bien->nombre1}}, {{$bien->nombre2}}
+            </td>
           </tr>
           <tr>
             <td width="30">&nbsp; </td>
@@ -71,7 +69,9 @@ function bett0Fecha($mes){
       {{ date('Y/m/d', strtotime($fecha->fecha)) }},
     @endforeach
     se realizo la inspeccion de las computadoras de la empresa estatal Quipus el model KUAA un total de {{ count($cajas)-1 }}
-    cajas con 6 unidades cada una, haciendo un total de {{ (count($cajas)-1) * 6}} computadoras Kuaa <!--mas 3 sueltos.--><br>
+    cajas con 6 unidades, y {{ count($datos) - ((count($cajas)-1) * 6) }} maquinas sueltas haciendo un total de
+     <b> {{count($datos)}}  computadoras Kuaas </b>.
+    <br>
     A continuacion se da un detalla en una tabla los datos y observaciones de cada una de ellas de las computadoras,
     con anexando las fotografias de aquellas observadas.
     <table width="100%" border="1">
@@ -108,10 +108,10 @@ function bett0Fecha($mes){
     <table width="100%">
       <tr>
         <td width="50%">
-          <b> <center> {{$nombre1}} <br> {{$c1}} </center> </b>
+          <b> <center> {{$bien->nombre1}} <br> C.I.: {{$bien->ci1}} </center> </b>
         </td>
         <td width="50%">
-          <b> <center> {{$nombre2}} <br> {{$c2}} </center> </b>
+          <b> <center> {{$bien->nombre2}} <br> C.I.:  {{$bien->ci2}} </center> </b>
         </td>
       </tr>
     </table>
@@ -122,6 +122,6 @@ function bett0Fecha($mes){
             $pdf->page_text(72, 18, "Header: {PAGE_NUM} of {PAGE_COUNT}", $font, 6, array(0,0,0));
         }
     </script>
-    
+
   </body>
 </html>
