@@ -18,26 +18,44 @@
         {!! Form::open(['accept-charset'=>'UTF-8', 'enctype'=>'multipart/form-data', 'method'=>'POST', 'files'=>true, 'autocomplete'=>'off', 'id'=>'form-insert'] ) !!}
 
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-12">
             <label for="bien_" > <b><i>Colegio</i></b> </label>
             {!! Form::text('colegio', null, ['class'=>'form-control', 'placeholder'=>'Colegio', 'id'=>'colegio_', 'required']) !!}
           </div>
-          <div class="col-md-6">
-            <label for="responsable_" > <b><i>Director/Profesor</i></b> </label>
-            {!! Form::text('responsable', null, ['class'=>'form-control', 'placeholder'=>'Responsable', 'id'=>'responsable_', 'required']) !!}
-          </div>
         </div>
 
+        <hr>
         <div class="row">
-          <div class="col-md-6">
-            <label for="telefono_" > <b><i>Telefono</i></b> </label>
+          <div class="col-md-4">
+            <label for="responsable_" > <b><i>Director/Responsable</i></b> </label>
+            {!! Form::text('responsable', null, ['class'=>'form-control', 'placeholder'=>'Responsable', 'id'=>'responsable_', 'required']) !!}
+          </div>
+          <div class="col-md-4">
+            <label for="telefono_" > <b><i>Telefono/Celular</i></b> </label>
             {!! Form::text('telefono', null, ['class'=>'form-control', 'placeholder'=>'Telefono/Celular', 'id'=>'telefono_', 'required']) !!}
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <label for="observacion_" > <b><i>Observacion</i></b> </label>
             {!! Form::text('observacion', null, ['class'=>'form-control', 'placeholder'=>'Observacion', 'id'=>'observacion_', 'required']) !!}
           </div>
         </div>
+
+        <hr>
+        <div class="row">
+          <div class="col-md-4">
+            <label for="profesor_" > <b><i>Profesor Computacion</i></b> </label>
+            {!! Form::text('profesor', null, ['class'=>'form-control', 'placeholder'=>'Profesor Computacion', 'id'=>'profesor_', 'required']) !!}
+          </div>
+          <div class="col-md-4">
+            <label for="celular_profesor_" > <b><i>Telefono/Celular</i></b> </label>
+            {!! Form::text('celular_profesor', null, ['class'=>'form-control', 'placeholder'=>'Telefono/Celular', 'id'=>'celular_profesor_', 'required']) !!}
+          </div>
+          <div class="col-md-4">
+            <label for="observacion_profesor_" > <b><i>Observacion</i></b> </label>
+            {!! Form::text('observacion_profesor', null, ['class'=>'form-control', 'placeholder'=>'Observacion', 'id'=>'observacion_profesor_', 'required']) !!}
+          </div>
+        </div>
+
         <hr>
         <div class="row">
           <div class="col-md-6">
@@ -86,27 +104,43 @@
                     {!! Form::open(['route'=>['Bien.update', ':DATO_ID'], 'method'=>'PATCH', 'id'=>'form-update' ])!!}
 
                     <div class="row">
-                      <div class="col-md-6">
-                        <label for="bien_" > <b><i>Colegio</i></b> </label>
+                      <div class="col-md-12">
+                        <label for="bien" > <b><i>Colegio</i></b> </label>
                         {!! Form::text('colegio', null, ['class'=>'form-control', 'placeholder'=>'Colegio', 'id'=>'colegio', 'required']) !!}
-                      </div>
-                      <div class="col-md-6">
-                        <label for="responsable_" > <b><i>Director/Profesor</i></b> </label>
-                        {!! Form::text('responsable', null, ['class'=>'form-control', 'placeholder'=>'Responsable', 'id'=>'responsable', 'required']) !!}
                       </div>
                     </div>
 
+                    <hr>
                     <div class="row">
-                      <div class="col-md-6">
-                        <label for="telefono_" > <b><i>Telefono</i></b> </label>
+                      <div class="col-md-4">
+                        <label for="responsable" > <b><i>Director/Responsable</i></b> </label>
+                        {!! Form::text('responsable', null, ['class'=>'form-control', 'placeholder'=>'Responsable', 'id'=>'responsable', 'required']) !!}
+                      </div>
+                      <div class="col-md-4">
+                        <label for="telefono" > <b><i>Telefono/Celular</i></b> </label>
                         {!! Form::text('telefono', null, ['class'=>'form-control', 'placeholder'=>'Telefono/Celular', 'id'=>'telefono', 'required']) !!}
                       </div>
-                      <div class="col-md-6">
-                        <label for="observacion_" > <b><i>Observacion</i></b> </label>
+                      <div class="col-md-4">
+                        <label for="observacion" > <b><i>Observacion</i></b> </label>
                         {!! Form::text('observacion', null, ['class'=>'form-control', 'placeholder'=>'Observacion', 'id'=>'observacion', 'required']) !!}
                       </div>
                     </div>
+
                     <hr>
+                    <div class="row">
+                      <div class="col-md-4">
+                        <label for="profesor" > <b><i>Profesor Computacion</i></b> </label>
+                        {!! Form::text('profesor', null, ['class'=>'form-control', 'placeholder'=>'Profesor Computacion', 'id'=>'profesor', 'required']) !!}
+                      </div>
+                      <div class="col-md-4">
+                        <label for="celular_profesor" > <b><i>Telefono/Celular</i></b> </label>
+                        {!! Form::text('celular_profesor', null, ['class'=>'form-control', 'placeholder'=>'Telefono/Celular', 'id'=>'celular_profesor', 'required']) !!}
+                      </div>
+                      <div class="col-md-4">
+                        <label for="observacion_profesor" > <b><i>Observacion</i></b> </label>
+                        {!! Form::text('observacion_profesor', null, ['class'=>'form-control', 'placeholder'=>'Observacion', 'id'=>'observacion_profesor', 'required']) !!}
+                      </div>
+                    </div>
 
                     <div class="row">
                       <div class="col-md-6">
@@ -242,6 +276,9 @@
                       $('#responsable').val(el.responsable);
                       $('#telefono').val(el.telefono);
                       $('#observacion').val(el.observacion);
+                      $('#profesor').val(el.profesor);
+                      $('#celular_profesor').val(el.celular_profesor);
+                      $('#observacion_profesor').val(el.observacion_profesor);
                       $('#nombre1').val(el.nombre1);
                       $('#nombre2').val(el.nombre2);
                       $('#ci1').val(el.ci1);

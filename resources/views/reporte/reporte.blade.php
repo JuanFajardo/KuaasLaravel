@@ -29,10 +29,11 @@ function bett0Fecha($mes){
   </head>
   <body>
     <center>
-    <b style="font-size:20px; text-align: center;" ><br><br> <u>INFORME DE REVISION DE LAS COMPUTADORAS <BR>QUIPUS-KUAA EN LA UNIDAD EDUCATIVA<br>{{ strtoupper( $datos[0]->colegio )}} </u></b>
+    <!--<b style="font-size:20px; text-align: center;" ><br><br> <u>INFORME DE REVISION DE LAS COMPUTADORAS <BR>QUIPUS-KUAA EN LA UNIDAD EDUCATIVA<br>{{ strtoupper( $datos[0]->colegio )}} </u></b>-->
+      <b style="font-size:20px; text-align: center;" ><br><br> <u>ACTA DE ENTREGA<br>{{ strtoupper( $datos[0]->colegio )}} </u></b>
     </center>
     <br><br>
-    <table width="100%">
+    <!--<table width="100%">
         <tbody>
           <tr>
             <td width="30">&nbsp; </td>
@@ -61,16 +62,20 @@ function bett0Fecha($mes){
             <td colspan="2"> <br><b>Fecha:</b> {{date('d')}} de {{ bett0Fecha(date('m')) }} de {{date('Y')}} </td>
           </tr>
         </tbody>
-    </table>
+    </table>-->
     <hr>
     <br><br>
-    En fechas
-    @foreach($fechas as $fecha)
-      {{ date('Y/m/d', strtotime($fecha->fecha)) }},
-    @endforeach
-    se realizo la inspeccion de las computadoras de la empresa estatal Quipus el model KUAA un total de {{ count($cajas)-1 }}
+    A los  {{date('d')}} días del mes de {{bett0Fecha(date('m'))}} de {{date('Y')}}, se hace la entrega a {{ strtoupper( $datos[0]->colegio )}} la entrega
+    computadoras de la empresa estatal Quipus, Computadoras Personales Quipus - Kuaa Modelo MG 101A8, un total de {{ count($cajas)-1 }}
     cajas con 6 unidades, y {{ count($datos) - ((count($cajas)-1) * 6) }} maquinas sueltas haciendo un total de
      <b> {{count($datos)}}  computadoras Kuaas </b>.
+     <br>
+     Dichos computadoras fueron revisadas en la unidad de educativa a solicitud de la Unidad de Bienes del G.A.M.P.<br>
+     Las compuitadoras fueron revisadas en fechas
+    @foreach($fechas as $fecha)
+      <b> {{ date('Y/m/d', strtotime($fecha->fecha)) }},</b>
+    @endforeach
+    se realizo la inspeccion.
     <br>
     A continuacion se da un detalla en una tabla los datos y observaciones de cada una de ellas de las computadoras,
     con anexando las fotografias de aquellas observadas.
@@ -80,7 +85,7 @@ function bett0Fecha($mes){
           <th>Nro</th>
           <th>Fecha</th>
           <th>Codigo de Caja</th>
-          <th>Codigo de Unidad</th>
+          <th>Codigo de Computadora</th>
           <th>Estado Fisico</th>
           <th>Observacion</th>
         </tr>
@@ -108,10 +113,25 @@ function bett0Fecha($mes){
     <table width="100%">
       <tr>
         <td width="50%">
-          <b> <center> {{$bien->nombre1}} <br> C.I.: {{$bien->ci1}} </center> </b>
+          <b> <center> <b>Ing. Marlene Chumacero</b> <br> Jefe de la Unidad de Metodos y Sistemas  </center> </b>
         </td>
         <td width="50%">
-          <b> <center> {{$bien->nombre2}} <br> C.I.:  {{$bien->ci2}} </center> </b>
+          <b> <center> <b>Percy Burgoa Velasquez</b> <br> Responsable de Educación </center> </b>
+        </td>
+      </tr>
+      <tr> <td> <br><br><br><br> </td> </tr>
+      <tr>
+        <td width="50%" colspan="2">
+          <b> <center> <b>{{$bien->responsable}}</b> <br> Responsable del {{$datos[0]->colegio}}  </center> </b>
+        </td>
+      </tr>
+      <tr> <td> <br><br><br><br> </td> </tr>
+      <tr>
+        <td width="50%">
+          <b> <center> <b>{{$bien->nombre1}}</b> <br> Tecnico Revisor </center> </b>
+        </td>
+        <td width="50%">
+          <b> <center> <b>{{$bien->nombre2}}</b> <br> Tecnico Revisor  </center> </b>
         </td>
       </tr>
     </table>

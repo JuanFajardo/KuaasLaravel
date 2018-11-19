@@ -33,13 +33,11 @@ class BienController extends Controller
   }
 
   public function computadoras($id){
-    /*$datos = \DB::table('inventarios')->join('biens', 'inventarios.bien_id', '=', 'biens.id')
-                                      ->where('inventarios.bien_id', '=', $id)
-                                      ->select('inventarios.*', 'biens.*')->get();*/
-
    $datos = \DB::table('inventarios')->join('biens', 'inventarios.bien_id', '=', 'biens.id')
                                      ->where('inventarios.bien_id', '=', $id)
-                                     ->select('inventarios.*', 'biens.colegio', 'biens.responsable', 'biens.telefono')->get();
+                                     ->select('inventarios.*',
+                                     'biens.colegio', 'biens.responsable', 'biens.telefono',
+                                     'biens.profesor', 'biens.celular_profesor', 'biens.observacion_profesor')->get();
     return view('bien.computadoras', compact('datos'));
   }
 

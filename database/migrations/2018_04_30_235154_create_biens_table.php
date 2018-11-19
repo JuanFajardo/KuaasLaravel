@@ -14,6 +14,9 @@ class CreateBiensTable extends Migration
           $table->string('responsable');
           $table->string('telefono');
           $table->string('observacion');
+          $table->string('profesor');
+          $table->string('celular_profesor');
+          $table->string('observacion_profesor');
           $table->string('nombre1');
           $table->string('nombre2');
           $table->string('ci1');
