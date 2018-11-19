@@ -121,8 +121,11 @@ function bett0Fecha($mes){
       </tr>
       <tr> <td> <br><br><br><br> </td> </tr>
       <tr>
-        <td width="50%" colspan="2">
+        <td width="50%">
           <b> <center> <b>{{$bien->responsable}}</b> <br> Responsable del {{$datos[0]->colegio}}  </center> </b>
+        </td>
+        <td width="50%">
+          <b> <center> <b>{{$bien->profesor}}</b> <br> Profesor de computacion del {{$datos[0]->colegio}}  </center> </b>
         </td>
       </tr>
       <tr> <td> <br><br><br><br> </td> </tr>
