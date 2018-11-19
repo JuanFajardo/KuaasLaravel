@@ -40,6 +40,7 @@ class InventarioController extends Controller
     $curso      = $request->curso;
     $anio       = $request->anio;
     $estado     = $request->estado;
+    $request['fecha']      = date('Y-m-d');
     $observacion= $request->observacion;
     $dato = new Inventario;
     $dato->fill($request->all());
@@ -58,6 +59,7 @@ class InventarioController extends Controller
 
   public function update(Request $request, $id){
     $dato = Inventario::find($id);
+    $fecha['fecha']     = date('Y-m-d');
     $request['user_id'] = 1;//\Auth::user()->id;
 
     if( $request->tipo == "USO" ){
