@@ -70,7 +70,8 @@ class InventarioController extends Controller
 
     $dato->fill($request->all());
     $dato->save();
-    return redirect('/Inventario');
+    return back();
+    //return redirect('/Inventario');
   }
 
   public function destroy(Request $request, $id){

@@ -79,7 +79,7 @@ function bett0Fecha($mes){
     <br>
     A continuacion se da un detalla en una tabla los datos y observaciones de cada una de ellas de las computadoras,
     con anexando las fotografias de aquellas observadas.
-    <table width="100%" border="1">
+    <table width="100%" border="1" style="font-size:10pt">
       <thead>
         <tr>
           <th>Nro</th>
@@ -108,7 +108,8 @@ function bett0Fecha($mes){
         @endforeach
       </tbody>
     </table>
-
+    <br><br>
+    Firman al pie de la presente.
     <br><br><br><br><br><br>
     <table width="100%">
       <tr>
@@ -120,6 +121,13 @@ function bett0Fecha($mes){
         </td>
       </tr>
       <tr> <td> <br><br><br><br> </td> </tr>
+      @if($bien->profesor == "nn")
+      <tr>
+        <td width="50%" colspan="2">
+          <b> <center> <b>{{$bien->responsable}}</b> <br> Responsable del {{$datos[0]->colegio}}  </center> </b>
+        </td>
+      </tr>
+      @else
       <tr>
         <td width="50%">
           <b> <center> <b>{{$bien->responsable}}</b> <br> Responsable del {{$datos[0]->colegio}}  </center> </b>
@@ -128,6 +136,8 @@ function bett0Fecha($mes){
           <b> <center> <b>{{$bien->profesor}}</b> <br> Profesor de computacion del {{$datos[0]->colegio}}  </center> </b>
         </td>
       </tr>
+      @endif
+
       <tr> <td> <br><br><br><br> </td> </tr>
       <tr>
         <td width="50%">

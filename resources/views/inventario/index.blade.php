@@ -98,14 +98,12 @@
                                         <td>{{$dato->codigo_cajon}} - {{$dato->codigo}}</td>
                                         <td>
                                               <a href="#modalModifiar"  data-toggle="modal" data-target="" class="actualizar" style="color: #B8823B;"> <li class="fa fa-edit"></li>Editar</a> &nbsp;&nbsp;&nbsp;
-                                              <!--<a href="#"  data-toggle="modal" data-target="" style="color: #ff0000;" class="eliminar"> <li class="fa fa-trash"></li>Eliminar</a>-->
+
                                         </td>
                                     </tr>
                                 @endforeach
                             </tbody>
                         </table>
-                        {!! Form::open(['route'=>['Inventario.destroy', ':DATO_ID'], 'method'=>'DELETE', 'id'=>'form-delete']) !!}
-                        {!! Form::close() !!}
                     </div>
 
                 </div>
@@ -161,31 +159,9 @@
                       $('#codigo_cajon').val(el.codigo_cajon);
                       $('#bien_id').val(el.bien_id);
                     });
-                }else{
-                    //
                 }
             });
         });
 
-        /*
-        $('.eliminar').click(function(event) {
-            event.preventDefault();
-            var fila = $(this).parents('tr');
-            var id = fila.data('id');
-            var form = $('#form-delete');
-            var url = form.attr('action').replace(':DATO_ID',id);
-            var data = form.serialize();
-
-            if(confirm('Esta seguro de eliminar el Inventario'))
-            {
-                $.post(url, data, function(result, textStatus, xhr) {
-                    alert(result);
-                    fila.fadeOut();
-                }).fail(function(esp){
-                    fila.show();
-                });
-            }
-        });
-        */
     </script>
 @endsection
