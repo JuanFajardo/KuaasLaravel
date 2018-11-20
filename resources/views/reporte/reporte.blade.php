@@ -65,9 +65,25 @@ function bett0Fecha($mes){
     </table>-->
     <hr>
     <br><br>
+    <?php $sueltos = count($datos) - ((count($cajas)-1) * 6); ?>
     A los  {{date('d')}} días del mes de {{bett0Fecha(date('m'))}} de {{date('Y')}}, se hace la entrega a {{ strtoupper( $datos[0]->colegio )}} la entrega
-    computadoras de la empresa estatal Quipus, Computadoras Personales Quipus - Kuaa Modelo MG 101A8, un total de {{ count($cajas)-1 }}
-    cajas con 6 unidades, y {{ count($datos) - ((count($cajas)-1) * 6) }} maquinas sueltas haciendo un total de
+    computadoras de la empresa estatal Quipus, Computadoras Personales Quipus - Kuaa Modelo MG 101A8, un total de
+
+    @if($sueltos == 6 )
+      {{ count($cajas) }}
+    @else
+      {{ count($cajas)-1 }}
+    @endif
+
+    cajas de 6 unidades, y
+
+    @if($sueltos == 6 )
+      {{ count($datos) - ((count($cajas)) * 6) }} 
+    @else
+      {{ count($datos) - ((count($cajas)-1) * 6) }}
+    @endif
+
+    maquinas sueltas haciendo un total de
      <b> {{count($datos)}}  computadoras Kuaas </b>.
      <br>
      Dichos computadoras fueron revisadas en la unidad de educativa a solicitud de la Unidad de Bienes del G.A.M.P.<br>
