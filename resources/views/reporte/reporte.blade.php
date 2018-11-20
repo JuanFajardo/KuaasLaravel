@@ -78,7 +78,7 @@ function bett0Fecha($mes){
     cajas de 6 unidades, y
 
     @if($sueltos == 6 )
-      {{ count($datos) - ((count($cajas)) * 6) }} 
+      {{ count($datos) - ((count($cajas)) * 6) }}
     @else
       {{ count($datos) - ((count($cajas)-1) * 6) }}
     @endif
@@ -95,7 +95,7 @@ function bett0Fecha($mes){
     <br>
     A continuacion se da un detalla en una tabla los datos y observaciones de cada una de ellas de las computadoras,
     con anexando las fotografias de aquellas observadas.
-    <table width="100%" border="1" style="font-size:10pt">
+    <table width="100%" border="1" style="font-size:9pt">
       <thead>
         <tr>
           <th>Nro</th>
