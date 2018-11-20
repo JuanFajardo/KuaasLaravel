@@ -93,7 +93,7 @@ function bett0Fecha($mes){
     @endforeach
     se realizo la inspeccion.
     <br>
-    A continuacion se da un detalla en una tabla los datos y observaciones de cada una de las computadoras.
+    A continuacion se  detalla en una tabla los datos y observaciones de cada una de las computadoras.
     <table width="100%" border="1" style="font-size:9pt">
       <thead>
         <tr>
