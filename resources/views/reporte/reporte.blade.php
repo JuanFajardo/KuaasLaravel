@@ -66,7 +66,7 @@ function bett0Fecha($mes){
     <hr>
     <br><br>
     <?php $sueltos = count($datos) - ((count($cajas)-1) * 6); ?>
-    A los  {{date('d')}} días del mes de {{bett0Fecha(date('m'))}} de {{date('Y')}}, se hace la entrega a {{ strtoupper( $datos[0]->colegio )}} la entrega
+    A los  {{date('d')}} días del mes de {{bett0Fecha(date('m'))}} de {{date('Y')}}, se hace la entrega al {{ strtoupper( $datos[0]->colegio )}},
     computadoras de la empresa estatal Quipus, Computadoras Personales Quipus - Kuaa Modelo MG 101A8, un total de
 
     @if($sueltos == 6 )
@@ -87,14 +87,13 @@ function bett0Fecha($mes){
      <b> {{count($datos)}}  computadoras Kuaas </b>.
      <br>
      Dichos computadoras fueron revisadas en la unidad de educativa a solicitud de la Unidad de Bienes del G.A.M.P.<br>
-     Las compuitadoras fueron revisadas en fechas
+     Las computadoras fueron revisadas en fechas
     @foreach($fechas as $fecha)
       <b> {{ date('Y/m/d', strtotime($fecha->fecha)) }},</b>
     @endforeach
     se realizo la inspeccion.
     <br>
-    A continuacion se da un detalla en una tabla los datos y observaciones de cada una de ellas de las computadoras,
-    con anexando las fotografias de aquellas observadas.
+    A continuacion se da un detalla en una tabla los datos y observaciones de cada una de las computadoras.
     <table width="100%" border="1" style="font-size:9pt">
       <thead>
         <tr>
