@@ -29,42 +29,11 @@ function bett0Fecha($mes){
   </head>
   <body>
     <center>
-    <!--<b style="font-size:20px; text-align: center;" ><br><br> <u>INFORME DE REVISION DE LAS COMPUTADORAS <BR>QUIPUS-KUAA EN LA UNIDAD EDUCATIVA<br>{{ strtoupper( $datos[0]->colegio )}} </u></b>-->
       <b style="font-size:20px; text-align: center;" ><br><br> <u>ACTA DE ENTREGA<br>{{ strtoupper( $datos[0]->colegio )}} </u></b>
     </center>
-    <br><br>
-    <!--<table width="100%">
-        <tbody>
-          <tr>
-            <td width="30">&nbsp; </td>
-            <td width="30"> <b>A:</b> </td>
-            <td> Ing. Marlene Ruth Chumacero R.</td>
-          </tr>
-          <tr>
-            <td width="30">&nbsp; </td>
-            <td colspan="2"> <b>JEFE UNIDAD DE MÉTODOS Y SISTEMAS</b> </td>
-          </tr>
-          <tr><td>&nbsp;</td></tr>
-          <tr>
-            <td width="30">&nbsp; </td>
-            <td width="30"> <b>DE:</b> </td>
-            <td>
-                  {{$bien->nombre1}}, {{$bien->nombre2}}
-            </td>
-          </tr>
-          <tr>
-            <td width="30">&nbsp; </td>
-            <td colspan="2"> <b>PROGRAMADORES</b> </td>
-          </tr>
-          <tr><td>&nbsp;</td></tr>
-          <tr>
-            <td width="30">&nbsp; </td>
-            <td colspan="2"> <br><b>Fecha:</b> {{date('d')}} de {{ bett0Fecha(date('m')) }} de {{date('Y')}} </td>
-          </tr>
-        </tbody>
-    </table>-->
+    <br>
     <hr>
-    <br><br>
+    <br>
     <?php $sueltos = count($datos) - ((count($cajas)-1) * 6); ?>
     A los  {{date('d')}} días del mes de {{bett0Fecha(date('m'))}} de {{date('Y')}}, se hace la entrega al {{ strtoupper( $datos[0]->colegio )}},
     computadoras de la empresa estatal Quipus, Computadoras Personales Quipus - Kuaa Modelo MG 101A8, un total de
@@ -123,7 +92,6 @@ function bett0Fecha($mes){
         @endforeach
       </tbody>
     </table>
-    <br><br>
     Firman al pie de la presente.
     <br><br><br><br><br><br>
     <table width="100%">
