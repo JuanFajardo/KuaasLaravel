@@ -66,7 +66,7 @@ class BienController extends Controller
     $fechas = \DB::table('inventarios')->where('bien_id', '=', $id)->select('fecha')->groupBy('fecha')->get();
     $cajas  = \DB::table('inventarios')->where('bien_id', '=', $id)->select('codigo_cajon')->groupBy('codigo_cajon')->get();
 
-
+    //return view('reporte.excel', compact('datos','fechas', 'cajas', 'bien') );
     $fecha = date('Y-m-d');
     $view =  \View::make('reporte.reporte', compact('datos','fechas', 'cajas', 'bien') )->render();
     $pdf = \App::make('dompdf.wrapper');
