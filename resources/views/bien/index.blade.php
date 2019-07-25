@@ -1,8 +1,7 @@
-@extends('lourdes')
+@extends('bett0')
 
 @section('empleado')   @endsection
 @section('titulo') Bienes @endsection
-
 
 @section('modal1')
 <div id="modalAgregar" class="modal fade" role="dialog">

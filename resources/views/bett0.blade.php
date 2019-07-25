@@ -9,11 +9,11 @@
   <meta name="author" content="">
   <title> Kuaas 1.0 - @yield('titulo') </title>
 
-  <link rel="stylesheet" href="{{ URL::asset('asset/bootstrap/css/bootstrap.min.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('asset/DataTables/datatables.min.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('asset/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('asset/fontawesome/web-fonts-with-css/css/fontawesome.min.css') }}">
-  <link rel="stylesheet" href="{{ URL::asset('asset/theme/css/sb-admin.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('public/asset/bootstrap/css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('public/asset/DataTables/datatables.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('public/asset/fontawesome/web-fonts-with-css/css/fontawesome-all.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('public/asset/fontawesome/web-fonts-with-css/css/fontawesome.min.css') }}">
+  <link rel="stylesheet" href="{{ URL::asset('public/asset/theme/css/sb-admin.css') }}">
   <link rel="shortcut icon" href="{{ URL::asset('favicon.ico') }}"/>
 </head>
 
@@ -48,12 +48,12 @@
     @yield('modal3')
     @yield('modal4')
 
-    <script src="{{ URL::asset('asset/DataTables/jQuery-3.2.1/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
-    <script src="{{ URL::asset('asset/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
-    <script src="{{ URL::asset('asset/DataTables/datatables.min.js') }}" type="text/javascript"></script>
-    <script src="{{ URL::asset('asset/jquery-easing/jquery.easing.min.js') }}" type="text/javascript"></script>
-    <script src="{{ URL::asset('asset/theme/js/sb-admin.min.js') }}" type="text/javascript"></script>
-  
+    <script src="{{ URL::asset('public/asset/DataTables/jQuery-3.2.1/jquery-3.2.1.min.js') }}" type="text/javascript"></script>
+    <script src="{{ URL::asset('public/asset/bootstrap/js/bootstrap.min.js') }}" type="text/javascript"></script>
+    <script src="{{ URL::asset('public/asset/DataTables/datatables.min.js') }}" type="text/javascript"></script>
+    <script src="{{ URL::asset('public/asset/jquery-easing/jquery.easing.min.js') }}" type="text/javascript"></script>
+    <script src="{{ URL::asset('public/asset/theme/js/sb-admin.min.js') }}" type="text/javascript"></script>
+
   @yield('js')
 
   <script type="text/javascript">

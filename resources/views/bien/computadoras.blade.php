@@ -1,4 +1,4 @@
-@extends('lourdes')
+@extends('bett0')
 
 @section('empleado')   @endsection
 @section('titulo') Bienes @endsection
