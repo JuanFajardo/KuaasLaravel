@@ -112,7 +112,7 @@ function bett0Fecha($mes){
       @else
       <tr>
         <td width="50%">
-          <b> <center> <b>{{$bien->profesor}}</b> <br> Técnico Revisor  </center> </b>
+          <b> <center> <b>{{$bien->profesor}}</b> <br> Profesores de Computación  </center> </b>
         </td>
 
         <td width="50%">
